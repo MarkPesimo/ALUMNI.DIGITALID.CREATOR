@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ALUMNIDB" Class="ModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.20.23;Initial Catalog=ALUMNIDB;Persist Security Info=True;User ID=Zmgsqluser" SettingsObjectName="AlumniDigitalIDTool.Properties.Settings" SettingsPropertyName="ALUMNIDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.sys_user" Member="sys_users">
+    <Type Name="sys_user">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="school_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="user_type" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="date_created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="pin_number" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="sys_user_sys_user_student_link" Member="sys_user_student_links" ThisKey="id" OtherKey="user_id" Type="sys_user_student_link" />
+      <Association Name="sys_user_Student" Member="Students" ThisKey="id" OtherKey="user_id" Type="Student" />
+      <Association Name="sys_user_Course" Member="Courses" ThisKey="id" OtherKey="user_id" Type="Course" />
+    </Type>
+  </Table>
+  <Table Name="dbo.sys_user_student_link" Member="sys_user_student_links">
+    <Type Name="sys_user_student_link">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="student_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="sys_user_sys_user_student_link" Member="sys_user" ThisKey="user_id" OtherKey="id" Type="sys_user" IsForeignKey="true" />
+      <Association Name="Student_sys_user_student_link" Member="Student" ThisKey="student_id" OtherKey="id" Type="Student" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Students">
+    <Type Name="Student">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="alumni_group_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="guid" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="firstname" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="lastname" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="middlename" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="birthday" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="gender" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="civil_status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="section_name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="alumni_no" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="school_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="course_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="email_address" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="mobile_no" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="current_address" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="year_graduate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="member_type" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="date_created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="membership_expiration" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nationality" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Association Name="Student_sys_user_student_link" Member="sys_user_student_links" ThisKey="id" OtherKey="student_id" Type="sys_user_student_link" />
+      <Association Name="sys_user_Student" Member="sys_user" ThisKey="user_id" OtherKey="id" Type="sys_user" IsForeignKey="true" />
+      <Association Name="Course_Student" Member="Course" ThisKey="course_id" OtherKey="id" Type="Course" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Course" Member="Courses">
+    <Type Name="Course">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="school_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="alumni_group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="color_hex" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="course_code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="course_name" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="date_created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="nav_logo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="Course_Student" Member="Students" ThisKey="id" OtherKey="course_id" Type="Student" />
+      <Association Name="sys_user_Course" Member="sys_user" ThisKey="user_id" OtherKey="id" Type="sys_user" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.USP_SYSTEM_HASH_PASSWORD" Method="USP_SYSTEM_HASH_PASSWORD">
+    <Parameter Name="USER_ID" Parameter="uSER_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PASSWORD" Parameter="pASSWORD" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="PIN" Parameter="pIN" Type="System.String" DbType="NVarChar(150)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_SYS_EMAIL_USER_ACCOUT" Method="USP_SYS_EMAIL_USER_ACCOUT">
+    <Parameter Name="USER_ID" Parameter="uSER_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RETURN" Parameter="rETURN" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.USP_I_ALUMNI" Method="USP_I_ALUMNI">
+    <Parameter Name="PROCESS" Parameter="pROCESS" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="USP_I_ALUMNIResult">
+      <Column Name="student_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alumni_group_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alumni_no" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="alumni_name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="course_name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="year_graduated" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="member_type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="expiration_date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="student_guid" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.USP_SYSTEM_LOG_PROCESS" Method="USP_SYSTEM_LOG_PROCESS">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PROCESS" Parameter="pROCESS" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="USER_ID" Parameter="uSER_ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
