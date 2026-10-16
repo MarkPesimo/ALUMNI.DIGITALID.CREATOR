@@ -38,7 +38,8 @@ namespace AlumniDigitalIDCreator
 
             if (File.Exists(AlumniConstant.QRLocation + _alumnino + ".png"))
             {
-                picQR.BackgroundImage = Image.FromFile(AlumniConstant.QRLocation + _alumnino + ".png"); // =  _output_path + @"\QR Codes\" + _alumnino + ".png";
+                picProfile.BackgroundImage = Image.FromFile(AlumniConstant.QRLocation + _alumnino + ".PNG"); // =  _output_path + @"\QR Codes\" + _alumnino + ".png";
+                //picQR.BackgroundImage = Image.FromFile(AlumniConstant.QRLocation + _alumnino + ".png"); // =  _output_path + @"\QR Codes\" + _alumnino + ".png";               
                 Thread.Sleep(2000);
                 picQR_2.Update();
             }
@@ -47,17 +48,18 @@ namespace AlumniDigitalIDCreator
                 return false;
             }
 
-            if (File.Exists(AlumniConstant.ImageLocation + _guid + ".JPEG"))
-            {
-                picProfile.BackgroundImage = Image.FromFile(AlumniConstant.ImageLocation + _guid + ".JPEG"); // =  _output_path + @"\QR Codes\" + _alumnino + ".png";
-                Thread.Sleep(2000);
-                picProfile.Update();
-            }
-            else
-            {
-                return false;
-            }
-            //picQR.BackgroundImageLayout  = PictureBoxSizeMode.StretchImage;
+            //ALUMNI MEMBER IMMAGE
+            //if (File.Exists(AlumniConstant.ImageLocation + _guid + ".JPEG"))
+            //{
+            //    picProfile.BackgroundImage = Image.FromFile(AlumniConstant.ImageLocation + _guid + ".JPEG"); // =  _output_path + @"\QR Codes\" + _alumnino + ".png";
+            //    Thread.Sleep(2000);
+            //    picProfile.Update();
+            //} 
+            //else
+            //{
+            //    return false;
+            //}
+            
 
 
             panCard.Refresh();
@@ -100,7 +102,7 @@ namespace AlumniDigitalIDCreator
                 _bmp.Save(AlumniConstant.IDLocation + _alumnino + ".png");
 
                 AlumniRepository _repository = new AlumniRepository();
-                _repository.LogProcess(_id , "ALUMNI ID CREATED", _userid);
+                //_repository.LogProcess(_id , "ALUMNI ID CREATED", _userid);
 
                 return true;
             }

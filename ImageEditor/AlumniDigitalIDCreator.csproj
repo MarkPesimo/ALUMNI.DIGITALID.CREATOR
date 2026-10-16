@@ -98,6 +98,12 @@
     <Compile Include="forms\AlumniIdCreator.Designer.cs">
       <DependentUpon>AlumniIdCreator.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\UploadStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UploadStudent.Designer.cs">
+      <DependentUpon>UploadStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="menu_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\AlumniIdCreator.resx">
       <DependentUpon>AlumniIdCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\UploadStudent.resx">
+      <DependentUpon>UploadStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu_frm.resx">
       <DependentUpon>menu_frm.cs</DependentUpon>

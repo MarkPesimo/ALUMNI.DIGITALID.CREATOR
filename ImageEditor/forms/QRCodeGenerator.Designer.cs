@@ -36,7 +36,6 @@
             this.txtColor = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtpath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.picQR = new System.Windows.Forms.PictureBox();
             this.lsvList = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BranchName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,10 +46,11 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button2 = new System.Windows.Forms.Button();
             this.prb = new System.Windows.Forms.ProgressBar();
             this.lblrecord = new System.Windows.Forms.Label();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.picQR = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picQR)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +120,7 @@
             this.txtpath.ReadOnly = true;
             this.txtpath.Size = new System.Drawing.Size(674, 21);
             this.txtpath.TabIndex = 1096;
-            this.txtpath.Text = "C:\\Users\\MarkJPesimo\\Documents\\AlumniDigitalID\\QR Codes\\";
+            this.txtpath.Text = "C:\\Users\\mpesimo\\Downloads\\AlumniDigitalID\\QR Codes";
             // 
             // label1
             // 
@@ -131,15 +131,6 @@
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 1095;
             this.label1.Text = "Path :";
-            // 
-            // picQR
-            // 
-            this.picQR.BackColor = System.Drawing.Color.White;
-            this.picQR.Location = new System.Drawing.Point(751, 98);
-            this.picQR.Name = "picQR";
-            this.picQR.Size = new System.Drawing.Size(301, 297);
-            this.picQR.TabIndex = 1084;
-            this.picQR.TabStop = false;
             // 
             // lsvList
             // 
@@ -216,6 +207,11 @@
             this.columnHeader7.Text = "Guid";
             this.columnHeader7.Width = 0;
             // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "id";
+            this.columnHeader8.Width = 0;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Blue;
@@ -248,10 +244,14 @@
             this.lblrecord.TabIndex = 1100;
             this.lblrecord.Text = "Record count :  ";
             // 
-            // columnHeader8
+            // picQR
             // 
-            this.columnHeader8.Text = "id";
-            this.columnHeader8.Width = 0;
+            this.picQR.BackColor = System.Drawing.Color.White;
+            this.picQR.Location = new System.Drawing.Point(751, 98);
+            this.picQR.Name = "picQR";
+            this.picQR.Size = new System.Drawing.Size(301, 297);
+            this.picQR.TabIndex = 1084;
+            this.picQR.TabStop = false;
             // 
             // QRCodeGenerator
             // 

@@ -27,7 +27,7 @@ namespace AlumniDigitalIDTool.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.20.23;Initial Catalog=ALUMNIDB;Persist Security Info=True;Use" +
-            "r ID=Zmgsqluser;Password=zmgSQLu$er2016**")]
+            "r ID=ZMGSQLAdmin;Password=SQLT3rm!n@t0r2o26**")]
         public string ALUMNIDBConnectionString {
             get {
                 return ((string)(this["ALUMNIDBConnectionString"]));

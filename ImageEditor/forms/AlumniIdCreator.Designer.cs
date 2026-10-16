@@ -52,6 +52,7 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.prb = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
             this.lblrecord = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.lblCourseName = new System.Windows.Forms.Label();
             this.lblAlumniName = new System.Windows.Forms.Label();
             this.lblMemberType = new System.Windows.Forms.Label();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.picQR_2)).BeginInit();
             this.panCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
@@ -196,7 +196,7 @@
             this.txtOutput.ReadOnly = true;
             this.txtOutput.Size = new System.Drawing.Size(596, 21);
             this.txtOutput.TabIndex = 48;
-            this.txtOutput.Text = "C:\\Users\\MarkJPesimo\\Downloads\\Output";
+            this.txtOutput.Text = "C:\\Users\\mpesimo\\Downloads\\Output";
             // 
             // label5
             // 
@@ -280,6 +280,11 @@
             // 
             this.columnHeader7.Text = "Guid";
             this.columnHeader7.Width = 0;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "id";
+            this.columnHeader8.Width = 0;
             // 
             // prb
             // 
@@ -366,7 +371,7 @@
             // 
             this.lblAlumniNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblAlumniNo.BackColor = System.Drawing.Color.Transparent;
-            this.lblAlumniNo.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlumniNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlumniNo.ForeColor = System.Drawing.Color.Black;
             this.lblAlumniNo.Location = new System.Drawing.Point(86, 787);
             this.lblAlumniNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -390,12 +395,13 @@
             this.picQR.Size = new System.Drawing.Size(86, 77);
             this.picQR.TabIndex = 900;
             this.picQR.TabStop = false;
+            this.picQR.Visible = false;
             // 
             // lblExpiration
             // 
             this.lblExpiration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExpiration.BackColor = System.Drawing.Color.Transparent;
-            this.lblExpiration.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpiration.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpiration.ForeColor = System.Drawing.Color.Black;
             this.lblExpiration.Location = new System.Drawing.Point(308, 787);
             this.lblExpiration.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -410,7 +416,7 @@
             this.lblBatch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBatch.BackColor = System.Drawing.Color.Transparent;
-            this.lblBatch.Font = new System.Drawing.Font("Poppins Light", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBatch.ForeColor = System.Drawing.Color.Black;
             this.lblBatch.Location = new System.Drawing.Point(2, 650);
             this.lblBatch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -425,7 +431,7 @@
             this.lblCourseName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCourseName.BackColor = System.Drawing.Color.Transparent;
-            this.lblCourseName.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCourseName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(1)))), ((int)(((byte)(36)))));
             this.lblCourseName.Location = new System.Drawing.Point(2, 628);
             this.lblCourseName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -440,7 +446,7 @@
             this.lblAlumniName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAlumniName.BackColor = System.Drawing.Color.Transparent;
-            this.lblAlumniName.Font = new System.Drawing.Font("Poppins Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlumniName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlumniName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(1)))), ((int)(((byte)(36)))));
             this.lblAlumniName.Location = new System.Drawing.Point(2, 595);
             this.lblAlumniName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -454,7 +460,7 @@
             // 
             this.lblMemberType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMemberType.BackColor = System.Drawing.Color.Transparent;
-            this.lblMemberType.Font = new System.Drawing.Font("Poppins Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemberType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMemberType.ForeColor = System.Drawing.Color.Black;
             this.lblMemberType.Location = new System.Drawing.Point(308, 766);
             this.lblMemberType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -464,11 +470,6 @@
             this.lblMemberType.Text = "Annual Member";
             this.lblMemberType.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.lblMemberType.Visible = false;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "id";
-            this.columnHeader8.Width = 0;
             // 
             // AlumniIdCreator
             // 
